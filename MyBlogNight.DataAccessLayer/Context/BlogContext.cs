@@ -8,8 +8,12 @@ using System.Threading.Tasks;
 
 namespace MyBlogNight.DataAccessLayer.Context
 {
-    public class BlogContext:DbContext
+    public class BlogContext : DbContext
     {
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseSqlServer("Server=DESKTOP-32Q9FH5;initial catalog=BlogFoodyDb;integrated security=true;TrustServerCertificate=true");
+        }
         public DbSet<Article> Articles { get; set; }
         public DbSet<Category> Categories { get; set; }
         public DbSet<Comment> Comments { get; set; }
