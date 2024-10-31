@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35312.102
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyBlogNight.EntityLayer", "MyBlogNight.EntityLayer\MyBlogNight.EntityLayer.csproj", "{DEE5F1AE-B405-476F-B24F-7383F3819281}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyBlogNight.EntityLayer", "MyBlogNight.EntityLayer\MyBlogNight.EntityLayer.csproj", "{DEE5F1AE-B405-476F-B24F-7383F3819281}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyBlogNight.DataAccessLayer", "MyBlogNight.DataAccessLayer\MyBlogNight.DataAccessLayer.csproj", "{9EFC02AA-4E40-4F12-AD11-FA0F6BEEEAC7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{DEE5F1AE-B405-476F-B24F-7383F3819281}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DEE5F1AE-B405-476F-B24F-7383F3819281}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DEE5F1AE-B405-476F-B24F-7383F3819281}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EFC02AA-4E40-4F12-AD11-FA0F6BEEEAC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EFC02AA-4E40-4F12-AD11-FA0F6BEEEAC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EFC02AA-4E40-4F12-AD11-FA0F6BEEEAC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EFC02AA-4E40-4F12-AD11-FA0F6BEEEAC7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
