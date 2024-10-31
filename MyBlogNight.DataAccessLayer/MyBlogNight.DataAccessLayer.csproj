@@ -10,4 +10,9 @@
     <ProjectReference Include="..\MyBlogNight.EntityLayer\MyBlogNight.EntityLayer.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="EntityFramework\" />
+    <Folder Include="UnitOfWork\" />
+  </ItemGroup>
+
 </Project>
