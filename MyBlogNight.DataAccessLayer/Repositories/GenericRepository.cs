@@ -13,6 +13,11 @@ namespace MyBlogNight.DataAccessLayer.Repositories
     {
         private readonly BlogContext _context;
 
+        public GenericRepository(BlogContext context)
+        {
+            _context = context;
+        }
+
         public void Delete(int id)
         {
             var value = _context.Set<T>().Find(id);
