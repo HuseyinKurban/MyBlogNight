@@ -19,6 +19,11 @@ namespace MyBlogNight.BusinessLayer.Concrete
             _articleDal = articleDal;
         }
 
+        public List<Article> TArticleListWithCategory()
+        {
+           return _articleDal.ArticleListWithCategory();
+        }
+
         public void TDelete(int id)
         {
             _articleDal.Delete(id);

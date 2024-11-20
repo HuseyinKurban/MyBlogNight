@@ -21,7 +21,7 @@ namespace MyBlogNight.BusinessLayer.Concrete
         public void TDelete(int id)
         {
             
-            _categoryDal.Delete(id);
+            _categoryDal.Delete(id); 
         }
 
         public List<Category> TGetAll()

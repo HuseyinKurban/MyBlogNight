@@ -12,14 +12,14 @@ namespace MyBlogNight.EntityLayer.Concrete
 
         public string Title { get; set; }
 
-        //public int CategoryId { get; set; }
-
-        //public Category Category { get; set; }
-
         public DateTime CreatedDate { get; set; }
 
         public string CoverImageUrl { get; set; }
 
         public string MainImageUrl { get; set; }
+
+        public int CategoryId { get; set; }
+
+        public Category Category { get; set; }
     }
 }
