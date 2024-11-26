@@ -11,6 +11,6 @@ namespace MyBlogNight.BusinessLayer.Abstract
     {
         public List<Article> TArticleListWithCategory();
 
-        public List<Article> ArticleListWithCategoryAndAppUser();
+        public List<Article> TArticleListWithCategoryAndAppUser();
     }
 }

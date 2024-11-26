@@ -19,7 +19,7 @@ namespace MyBlogNight.BusinessLayer.Concrete
             _articleDal = articleDal;
         }
 
-        public List<Article> ArticleListWithCategoryAndAppUser()
+        public List<Article> TArticleListWithCategoryAndAppUser()
         {
            return _articleDal.ArticleListWithCategoryAndAppUser();
         }
