@@ -49,5 +49,11 @@ namespace MyBlogNight.PresentationLayer.Controllers
             _articleService.TDelete(id);
             return RedirectToAction("AricleList");
         }
+
+        public IActionResult ArticleDetail(int id)
+        {
+            var value=_articleService.TArticleListWithCategoryAndAppUserByArticleId(id);
+            return View(value);
+        }
     }
 }

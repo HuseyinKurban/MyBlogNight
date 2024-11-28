@@ -53,5 +53,10 @@ namespace MyBlogNight.BusinessLayer.Concrete
         {
             _articleDal.Update(entity);
         }
+
+        public Article TArticleListWithCategoryAndAppUserByArticleId(int id)
+        {
+            return _articleDal.ArticleListWithCategoryAndAppUserByArticleId(id);
+        }
     }
 }
