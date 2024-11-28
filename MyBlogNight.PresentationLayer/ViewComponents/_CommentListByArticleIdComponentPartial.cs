@@ -3,7 +3,7 @@ using MyBlogNight.BusinessLayer.Abstract;
 
 namespace MyBlogNight.PresentationLayer.ViewComponents
 {
-    public class _CommentListByArticleIdComponentPartial:ViewComponent
+    public class _CommentListByArticleIdComponentPartial : ViewComponent
     {
         private readonly ICommentService _commentService;
 
@@ -14,8 +14,9 @@ namespace MyBlogNight.PresentationLayer.ViewComponents
 
         public IViewComponentResult Invoke()
         {
-            _commentService.TGetById(1);
-            return View();
+            var values = _commentService.TGetCommentsByArticleId(1);
+            return View(values);
+
         }
     }
 }
