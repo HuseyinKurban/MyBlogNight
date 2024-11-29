@@ -63,5 +63,10 @@ namespace MyBlogNight.BusinessLayer.Concrete
         {
             _articleDal.ArticleViewCountIncrease(id);
         }
+
+        public List<Article> TGetArticlesByAppUserId(int id)
+        {
+            return _articleDal.GetArticlesByAppUserId(id);
+        }
     }
 }
