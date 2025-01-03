@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace MyBlogNight.DataAccessLayer.Repositories
 {
-
+    
     public class GenericRepository<T> : IGenericDal<T> where T : class
     {
         private readonly BlogContext _context;
