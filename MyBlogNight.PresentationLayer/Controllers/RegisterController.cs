@@ -23,7 +23,6 @@ namespace MyBlogNight.PresentationLayer.Controllers
             return View();
         }
 
-
         //asenkron yapı tanımlanması
         //asenkron= aynı anda birden fazla işlem yapılması 
         [HttpPost]
