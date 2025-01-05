@@ -11,6 +11,7 @@ namespace MyBlogNight.BusinessLayer.Concrete
 {
     public class CategoryManager : ICategoryService
     {
+        //entity ile ilişkili olan interface Icategorydal içerisinde bulundugundan dolayı çağırdık
         private readonly ICategoryDal _categoryDal;
 
         public CategoryManager(ICategoryDal categoryDal)

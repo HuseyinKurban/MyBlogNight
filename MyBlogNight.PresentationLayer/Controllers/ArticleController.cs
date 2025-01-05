@@ -16,7 +16,7 @@ namespace MyBlogNight.PresentationLayer.Controllers
             _categoryService = categoryService;
         }
 
-        public IActionResult AricleList()
+        public IActionResult ArticleList()
         {
             var values = _articleService.TArticleListWithCategory();
             return View(values);
