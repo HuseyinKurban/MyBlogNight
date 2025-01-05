@@ -68,5 +68,7 @@ namespace MyBlogNight.BusinessLayer.Concrete
         {
             return _articleDal.GetArticlesByAppUserId(id);
         }
+
+     
     }
 }

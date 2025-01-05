@@ -2,6 +2,7 @@
 using MyBlogNight.DataAccessLayer.Context;
 using MyBlogNight.DataAccessLayer.Repositories;
 using MyBlogNight.EntityLayer.Concrete;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,8 +14,11 @@ namespace MyBlogNight.DataAccessLayer.EntityFramework
   
     public class EfCategoryDal : GenericRepository<Category>, ICategoryDal
     {
+        private readonly BlogContext _blogContext;
         public EfCategoryDal(BlogContext context) : base(context)
         {
+            _blogContext = context;
         }
+
     }
 }

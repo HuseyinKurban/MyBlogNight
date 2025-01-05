@@ -18,5 +18,7 @@ namespace MyBlogNight.BusinessLayer.Abstract
         public void TArticleViewCountIncrease(int id);
 
         public List<Article> TGetArticlesByAppUserId(int id);
+
+      
     }
 }

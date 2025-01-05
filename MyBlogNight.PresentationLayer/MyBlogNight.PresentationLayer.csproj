@@ -20,6 +20,11 @@
 
   <ItemGroup>
     <Folder Include="Areas\Author\Data\" />
+    <Folder Include="wwwroot\markedia\markedia\css\version\" />
+    <Folder Include="wwwroot\markedia\markedia\fonts\" />
+    <Folder Include="wwwroot\markedia\markedia\images\version\" />
+    <Folder Include="wwwroot\markedia\markedia\js\" />
+    <Folder Include="wwwroot\markedia\markedia\upload\" />
   </ItemGroup>
 
 </Project>

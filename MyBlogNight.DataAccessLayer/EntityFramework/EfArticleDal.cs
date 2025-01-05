@@ -20,31 +20,33 @@ namespace MyBlogNight.DataAccessLayer.EntityFramework
             context = contexts;
         }
 
+
+
         public List<Article> ArticleListWithCategory()
         {
-            
-            var values=context.Articles.Include(x => x.Category).ToList();
+
+            var values = context.Articles.Include(x => x.Category).ToList();
             return values;
-           
+
         }
 
         public List<Article> ArticleListWithCategoryAndAppUser()
         {
-          
-            var values=context.Articles.Include(x=>x.Category).Include(y=>y.AppUser).ToList();
+
+            var values = context.Articles.Include(x => x.Category).Include(y => y.AppUser).ToList();
             return values;
         }
 
         public Article ArticleListWithCategoryAndAppUserByArticleId(int id)
         {
-           
-            var values=context.Articles.Where(x=>x.ArticleId==id).Include(y=>y.Category).Include(z=>z.AppUser).FirstOrDefault();
+
+            var values = context.Articles.Where(x => x.ArticleId == id).Include(y => y.Category).Include(z => z.AppUser).FirstOrDefault();
             return values;
         }
 
         public void ArticleViewCountIncrease(int id)
         {
-          
+
             var updatedValue = context.Articles.Find(id);
             updatedValue.ArticleViewCount += 1;
             context.SaveChanges();
@@ -52,8 +54,16 @@ namespace MyBlogNight.DataAccessLayer.EntityFramework
 
         public List<Article> GetArticlesByAppUserId(int id)
         {
-           
-            var values=context.Articles.Where(x=>x.AppUserId==id).ToList();
+
+            var values = context.Articles.Where(x => x.AppUserId == id).ToList();
+            return values;
+        }
+
+
+        public List<Article> PopularCategoryArticlesViewCount()
+        {
+
+            var values = context.Articles.OrderByDescending(x => x.ArticleViewCount).Take(3).ToList();
             return values;
         }
     }

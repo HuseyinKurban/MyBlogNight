@@ -18,5 +18,9 @@ namespace MyBlogNight.DataAccessLayer.Abstract
         void ArticleViewCountIncrease(int id);
 
         List<Article> GetArticlesByAppUserId(int id);
+
+        List<Article> PopularCategoryArticlesViewCount();
+
+      
     }
 }

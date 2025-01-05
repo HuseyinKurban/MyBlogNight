@@ -1,0 +1,39 @@
+﻿@model List<Article>
+
+@foreach (var item in Model)
+{
+
+
+    <div class="blog-box wow fadeIn">
+        <div class="post-media">
+            <a href="/Article/ArticleDetail/@item.ArticleId" title="">
+                <img src="@item.CoverImageUrl" alt="" class="img-fluid">
+                <div class="hovereffect">
+                    <span></span>
+                </div>
+                <!-- end hover -->
+            </a>
+        </div>
+        <!-- end media -->
+        <div class="blog-meta big-meta text-center">
+
+            <h4><a href="/Article/ArticleDetail/@item.ArticleId" title="">@item.Title</a></h4>
+
+            <p class="card-text">@item.Detail.Substring(0, 200)...<a href="/Article/ArticleDetail/@item.ArticleId">Devamını Oku</a></p>
+
+            <small><a href="/Article/ArticleDetail/@item.ArticleId" title="">Kategori: @item.Category.CategoryName</a></small>
+            <small><a href="/Article/ArticleDetail/@item.ArticleId" title="">Yazar: @item.AppUser.Name @item.AppUser.Surname</a></small>
+            <small><a href="/Article/ArticleDetail/@item.ArticleId" title="">Tarih: @item.CreatedDate.ToString("dd-MMM-yyyy")</a></small>
+            <small><a href="/Article/ArticleDetail/@item.ArticleId" title=""><i class="fa fa-eye"></i> @item.ArticleViewCount</a></small>
+    </div><!-- end meta -->
+       @*  <div class="post-sharing">
+            <ul class="list-inline">
+                <li><a href="#" class="fb-button btn btn-primary"><i class="fa fa-facebook"></i> <span class="down-mobile">Share on Facebook</span></a></li>
+                <li><a href="#" class="tw-button btn btn-primary"><i class="fa fa-twitter"></i> <span class="down-mobile">Tweet on Twitter</span></a></li>
+                <li><a href="#" class="gp-button btn btn-primary"><i class="fa fa-google-plus"></i></a></li>
+            </ul>
+        </div> *@<!-- end post-sharing -->
+</div><!-- end blog-box -->
+
+<hr class="invis">
+}
