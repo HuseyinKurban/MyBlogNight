@@ -97,8 +97,10 @@ h6 {
     margin-top: 4rem;
     background: rgba(0, 0, 0, 0) url(../../upload/cta.jpg) no-repeat scroll center center / cover;
     padding: 8rem 0;
-    position: relative;
+    position:  relative;
 }
+
+
 
 #cta h2 {
     margin: 0 0 2rem;

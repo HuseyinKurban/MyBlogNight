@@ -74,5 +74,10 @@ namespace MyBlogNight.BusinessLayer.Concrete
         {
            return _articleDal.ArticleCategoryCount();
         }
+
+        public Article TLastArticle()
+        {
+            return _articleDal.LastArticle();
+        }
     }
 }

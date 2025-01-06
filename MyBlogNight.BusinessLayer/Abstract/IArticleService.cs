@@ -21,5 +21,7 @@ namespace MyBlogNight.BusinessLayer.Abstract
         public List<Article> TGetArticlesByAppUserId(int id);
 
         List<CategoryArticleCountViewModel> TArticleCategoryCount();
+
+        public Article TLastArticle();
     }
 }

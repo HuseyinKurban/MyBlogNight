@@ -24,5 +24,6 @@ namespace MyBlogNight.DataAccessLayer.Abstract
 
         List<CategoryArticleCountViewModel> ArticleCategoryCount();
 
+        public Article LastArticle();
     }
 }

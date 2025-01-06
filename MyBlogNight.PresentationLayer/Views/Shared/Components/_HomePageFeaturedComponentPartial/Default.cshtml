@@ -1,10 +1,24 @@
-﻿<section id="cta" class="section">
+﻿@model Article
+
+<section id="cta" class="section" style="
+    background-image: url('@Model.MainImageUrl');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+ ">
+
+
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-12 align-self-center">
-                <h2>Son eklenen başlık</h2>
-                <p class="lead"> son eklenen yazı</p>
-                <a href="#" class="btn btn-primary">Yazıyı Oku</a>
+                <h2>@Model.Title</h2>
+                <p class="lead">
+                    @(Model.Detail.Length >= 100 ?
+                        Model.Detail.Substring(0, 100) + "..." :
+                        Model.Detail)
+                </p>
+                <a href="/Article/ArticleDetail/@Model.ArticleId" class="btn btn-primary">Yazıyı Oku</a>
             </div>
             <div class="col-lg-4 col-md-12">
                 <div class="newsletter-widget text-center align-self-center">
