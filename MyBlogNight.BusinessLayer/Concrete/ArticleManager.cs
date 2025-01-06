@@ -2,6 +2,7 @@
 using MyBlogNight.DataAccessLayer.Abstract;
 using MyBlogNight.DataAccessLayer.EntityFramework;
 using MyBlogNight.EntityLayer.Concrete;
+using MyBlogNight.EntityLayer.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -69,6 +70,9 @@ namespace MyBlogNight.BusinessLayer.Concrete
             return _articleDal.GetArticlesByAppUserId(id);
         }
 
-     
+        public List<CategoryArticleCountViewModel> TArticleCategoryCount()
+        {
+           return _articleDal.ArticleCategoryCount();
+        }
     }
 }

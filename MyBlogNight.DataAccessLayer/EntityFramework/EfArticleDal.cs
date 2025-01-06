@@ -3,6 +3,7 @@ using MyBlogNight.DataAccessLayer.Abstract;
 using MyBlogNight.DataAccessLayer.Context;
 using MyBlogNight.DataAccessLayer.Repositories;
 using MyBlogNight.EntityLayer.Concrete;
+using MyBlogNight.EntityLayer.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +21,19 @@ namespace MyBlogNight.DataAccessLayer.EntityFramework
             context = contexts;
         }
 
-
+        public List<CategoryArticleCountViewModel> ArticleCategoryCount()
+        {
+            return context.Articles
+               .GroupBy(a => new { a.CategoryId, a.Category.CategoryName })
+               .Select(g => new CategoryArticleCountViewModel
+               {
+                   CategoryId = g.Key.CategoryId,
+                   CategoryName = g.Key.CategoryName,
+                   ArticleCount = g.Count()
+               })
+               .OrderByDescending(x => x.ArticleCount)
+               .ToList();
+        }
 
         public List<Article> ArticleListWithCategory()
         {

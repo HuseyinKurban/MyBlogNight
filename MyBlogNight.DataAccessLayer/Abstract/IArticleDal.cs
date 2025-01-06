@@ -1,4 +1,5 @@
 ﻿using MyBlogNight.EntityLayer.Concrete;
+using MyBlogNight.EntityLayer.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,6 +22,7 @@ namespace MyBlogNight.DataAccessLayer.Abstract
 
         List<Article> PopularCategoryArticlesViewCount();
 
-      
+        List<CategoryArticleCountViewModel> ArticleCategoryCount();
+
     }
 }
