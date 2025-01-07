@@ -20,10 +20,14 @@ namespace MyBlogNight.DataAccessLayer.Abstract
 
         List<Article> GetArticlesByAppUserId(int id);
 
-        List<Article> PopularCategoryArticlesViewCount();
+        List<Article> PopularArticles();
 
         List<CategoryArticleCountViewModel> ArticleCategoryCount();
 
         public Article LastArticle();
+
+        List<Article> LastThreeArticle();
+
+    
     }
 }

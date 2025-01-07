@@ -1,12 +1,24 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MyBlogNight.BusinessLayer.Abstract;
+using X.PagedList.Extensions;
+using X.PagedList;
 
 namespace MyBlogNight.PresentationLayer.Controllers
 {
     public class HomePageController : Controller
     {
-        public IActionResult Index()
+        private readonly IArticleService _articleService;
+
+        public HomePageController(IArticleService articleService)
         {
-            return View();
+            _articleService = articleService;
+        }
+
+        public IActionResult Index(int page=1)
+        {
+
+            var values = _articleService.TArticleListWithCategoryAndAppUser().ToPagedList(page,3);
+            return View(values);
         }
     }
 }

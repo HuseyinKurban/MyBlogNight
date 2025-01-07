@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using MyBlogNight.BusinessLayer.Abstract;
 using MyBlogNight.PresentationLayer.Models;
 using System.Diagnostics;
 
@@ -7,10 +8,12 @@ namespace MyBlogNight.PresentationLayer.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+       
 
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
+            
         }
 
         public IActionResult Index()

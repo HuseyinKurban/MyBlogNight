@@ -23,5 +23,9 @@ namespace MyBlogNight.BusinessLayer.Abstract
         List<CategoryArticleCountViewModel> TArticleCategoryCount();
 
         public Article TLastArticle();
+
+        List<Article> TLastThreeArticle();
+
+        List<Article> TPopularArticles();
     }
 }

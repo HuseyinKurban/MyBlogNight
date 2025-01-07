@@ -78,11 +78,21 @@ namespace MyBlogNight.DataAccessLayer.EntityFramework
             return values;
         }
 
-        public List<Article> PopularCategoryArticlesViewCount()
+        public List<Article> LastThreeArticle()
+        {
+            var values = context.Articles.OrderByDescending(x => x.ArticleId).Take(3).ToList();
+            return values;
+        }
+
+   
+
+        public List<Article> PopularArticles()
         {
 
             var values = context.Articles.OrderByDescending(x => x.ArticleViewCount).Take(3).ToList();
             return values;
         }
+
+
     }
 }
