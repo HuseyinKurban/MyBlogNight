@@ -15,9 +15,15 @@ namespace MyBlogNight.EntityLayer.Concrete
 
         public string ImageUrl { get; set; }
 
+        public string Details { get; set; }
+
         public List<Article> Articles { get; set; }
 
         public List<Comment> Comments { get; set; }
 
+        public static implicit operator UserManager<object>(AppUser v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

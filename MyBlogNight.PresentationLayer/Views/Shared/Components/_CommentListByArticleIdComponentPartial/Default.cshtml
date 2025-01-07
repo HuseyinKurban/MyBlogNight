@@ -1,14 +1,43 @@
 ﻿@model List<Comment>
 
-<div class="comments">
-    <h3>Yorumlar</h3>
-    @foreach (var item in Model)
-    {
-        <div class="comment">
-            <p><strong>@item.AppUser.Name @item.AppUser.Surname</strong></p>
-            <p>@item.CommentDetail</p>
-            <p><em>@item.CreatedDate.ToString("dd-MMM-yyyy")</em></p>
-        </div>
-    }
- 
+
+<div class="custombox clearfix">
+    <h4 class="small-title">Yorumlar</h4>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="comments-list">
+                @foreach (var item in Model)
+                {
+                    var timeSpan = DateTime.Now - item.CreatedDate;
+                    string timeAgo;
+
+                    if (timeSpan.TotalDays >= 1)
+                    {
+                        timeAgo = $"{(int)timeSpan.TotalDays} gün önce";
+                    }
+                    else if (timeSpan.TotalHours >= 1)
+                    {
+                        timeAgo = $"{(int)timeSpan.TotalHours} saat önce";
+                    }
+                    else if (timeSpan.TotalMinutes >= 1)
+                    {
+                        timeAgo = $"{(int)timeSpan.TotalMinutes} dakika önce";
+                    }
+                    else
+                    {
+                        timeAgo = "Az önce";
+                    }
+                    <div class="media">
+                        <a class="media-left" href="#">
+                            <img src="@item.AppUser.ImageUrl" style="width:75px;height:75px;" alt="" class="rounded-circle">
+                        </a>
+                        <div class="media-body">
+                            <h4 class="media-heading user_name">@item.AppUser.Name @item.AppUser.Surname <small>@timeAgo</small></h4>
+                            <p>@item.CommentDetail</p>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div><!-- end col -->
+    </div><!-- end row -->
 </div>
