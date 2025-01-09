@@ -16,7 +16,6 @@ namespace MyBlogNight.PresentationLayer.ViewComponents.Layout
         public IViewComponentResult Invoke()
         {
             var values= _articleService.TLastArticle();
-            ViewBag.v=values.CoverImageUrl;
             return View(values);
         }
     }

@@ -1,0 +1,28 @@
+﻿<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<div class="newsletter-widget text-center align-self-center">
+    <h3>Bugün Abone Olun!</h3>
+    <p>
+        Haftalık Bültenimize abone olun ve güncellemeleri e-posta yoluyla alın.
+    </p>
+    <form class="form-inline" id="newsletterForm" method="post" asp-action="AddNewsLatter" asp-controller="HomePage">
+        <input type="email" name="Email" placeholder="Email Adresinizi Giriniz..." required class="form-control" />
+        <button type="button" class="btn btn-default btn-block" id="btn1">Üye Ol</button>
+    </form>
+</div><!-- end newsletter -->
+
+<script>
+    document.getElementById('btn1').addEventListener('click', function () {
+        swal({
+            title: "Başarıyla Abone Oldunuz",
+            text: "Harika! Haftalık bültenimiz artık e-posta kutunuzda olacak. İlginç içerikleri kaçırmayın!",
+            icon: "success",
+            button: "Tamam",
+        });
+
+        // 5 saniye sonra formu gönder ve yönlendir
+        setTimeout(function () {
+            document.getElementById('newsletterForm').submit(); // Form gönderme
+        }, 5000); // 5000ms = 5 saniye
+    });
+</script>

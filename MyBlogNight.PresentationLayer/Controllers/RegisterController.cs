@@ -34,7 +34,9 @@ namespace MyBlogNight.PresentationLayer.Controllers
                 Email = model.Email,
                 Surname = model.Surname,
                 UserName = model.Username,
-                ImageUrl = "Test"
+                ImageUrl = "",
+                Details=""
+                
             };
             // _userManager kullanarak verilen kullanıcıyı (appUser) ve şifresini (model.Password) sisteme kaydetmeye çalışır. Şifreyi hashleyerek kaydetme yapar
             var result = await _userManager.CreateAsync(appUser, model.Password);

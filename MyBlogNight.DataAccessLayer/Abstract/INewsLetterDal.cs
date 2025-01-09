@@ -5,10 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MyBlogNight.BusinessLayer.Abstract
+namespace MyBlogNight.DataAccessLayer.Abstract
 {
-    public interface ICategoryService:IGenericService<Category>
+    public interface INewsLetterDal:IGenericDal<NewsLetter>
     {
-    
     }
 }

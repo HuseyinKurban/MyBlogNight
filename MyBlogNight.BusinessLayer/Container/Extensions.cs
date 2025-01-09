@@ -26,6 +26,9 @@ namespace MyBlogNight.BusinessLayer.Container
 
             services.AddScoped<ICommentDal, EfCommentDal>();
             services.AddScoped<ICommentService, CommentManager>();
+
+            services.AddScoped<INewsLetterDal, EfNewsLetterDal>();
+            services.AddScoped<INewsLetterService,NewsLetterManager>();
         }
     }
 }

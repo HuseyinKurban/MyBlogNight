@@ -1,0 +1,38 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+@await Component.InvokeAsync("WriterLayoutHeadComponentPartial")
+
+<body>
+
+    <div id="main-wrapper">
+
+        @await Component.InvokeAsync("WriterLayoutNavHeadComponentPartial")
+
+        @await Component.InvokeAsync("WriterLayoutHeaderComponentPartial")
+
+        @await Component.InvokeAsync("WriterLayoutSideBarComponentPartial")
+
+        <div class="content-body">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-12">
+                        @RenderBody()
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @await Component.InvokeAsync("WriterLayoutFooterComponentPartial")
+
+    </div>
+    @await Component.InvokeAsync("WriterLayoutScriptComponentPartial")
+
+</body>
+
+</html>

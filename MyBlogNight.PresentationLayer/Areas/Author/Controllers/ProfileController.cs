@@ -39,7 +39,8 @@ namespace MyBlogNight.PresentationLayer.Areas.Author.Controllers
             var result = await _userManager.UpdateAsync(user);
             if (result.Succeeded)
             {
-                return RedirectToAction("CategoryList", "Category"/*,new {Area="AreaAdı"}*/);
+                return RedirectToAction("Index", "Login");
+
             }
             return View();
            

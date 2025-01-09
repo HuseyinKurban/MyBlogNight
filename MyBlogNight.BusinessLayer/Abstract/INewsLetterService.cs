@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 
 namespace MyBlogNight.BusinessLayer.Abstract
 {
-    public interface ICategoryService:IGenericService<Category>
+    public interface INewsLetterService:IGenericService<NewsLetter>
     {
-    
     }
 }

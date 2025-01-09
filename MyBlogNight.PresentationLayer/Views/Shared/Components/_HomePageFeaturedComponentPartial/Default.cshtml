@@ -1,7 +1,7 @@
 ﻿@model Article
 
 <section id="cta" class="section" style="
-    background-image: url('@Model.MainImageUrl');
+    background-image: url('@Model.CoverImageUrl');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -21,16 +21,7 @@
                 <a href="/Article/ArticleDetail/@Model.ArticleId" class="btn btn-primary">Yazıyı Oku</a>
             </div>
             <div class="col-lg-4 col-md-12">
-                <div class="newsletter-widget text-center align-self-center">
-                    <h3>Bugün Abone Olun!</h3>
-                    <p>
-                        Haftalık Bültenimize abone olun ve güncellemeleri e-posta yoluyla alın.
-                    </p>
-                    <form class="form-inline" method="post">
-                        <input type="text" name="email" placeholder="Email Adresinizi Giriniz..." required class="form-control" />
-                        <input type="submit" value="Üye Ol" class="btn btn-default btn-block" />
-                    </form>
-                </div><!-- end newsletter -->
+               @await Component.InvokeAsync("_HomePageNewsLetterComponentPartial")
             </div>
         </div>
     </div>

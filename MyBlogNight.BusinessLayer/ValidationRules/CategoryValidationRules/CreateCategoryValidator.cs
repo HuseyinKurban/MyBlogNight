@@ -1,4 +1,5 @@
 ﻿using FluentValidation;
+using FluentValidation.Results;
 using MyBlogNight.EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,11 @@ namespace MyBlogNight.BusinessLayer.ValidationRules.CategoryValidationRules
             RuleFor(x => x.CategoryName).MinimumLength(3).WithMessage("Lütfen en az 3 karakter veri girişi yapınız !");
             RuleFor(x => x.CategoryName).MaximumLength(20).WithMessage("Lütfen en fazla 20 karakter veri girişi yapınız !");
             
+        }
+
+        public ValidationResult Validate(Article article)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -18,8 +18,8 @@
                     <div class="col-lg-8 col-md-12 col-sm-12 col-xs-12">
                         <div class="page-wrapper">
                             <div class="blog-title-area">
-  
-                             
+
+
 
                                 <h3>@Model.Title</h3>
 
@@ -42,7 +42,7 @@
 
                                 </div><!-- end pp -->
 
-   
+
                             </div><!-- end content -->
 
                             <div class="blog-title-area">
@@ -52,7 +52,7 @@
 
                                 </div><!-- end meta -->
 
-                               
+
                             </div><!-- end title -->
 
 
@@ -74,32 +74,25 @@
                                 </div><!-- end row -->
                             </div><!-- end author-box -->
 
+
                             <hr class="invis1">
                             @await Component.InvokeAsync("_CommentListByArticleIdComponentPartial", new { articleId = Model.ArticleId })
                             <!-- end custom-box -->
 
                             <hr class="invis1">
+                            @await Component.InvokeAsync("_HomePageArticleWriteCommentComponentPartial", new { articleId = Model.ArticleId })
 
-                            <div class="custombox clearfix">
-                                <h4 class="small-title">Yorum Yapın</h4>
-                                <div class="row">
-                                    <div class="col-lg-12">
-                                        <form class="form-wrapper" method="post" action="/HomePage/AddComment" >
-                                            <textarea class="form-control" placeholder="Yorumunuz"></textarea>
-                                            <button type="submit" class="btn btn-primary">Gönder</button>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
                         </div><!-- end page-wrapper -->
                     </div><!-- end col -->
 
                     <div class="col-lg-4 col-md-12 col-sm-12 col-xs-12">
                         <div class="sidebar">
-    
+                            <div class="widget-no-style">
+                                @await Component.InvokeAsync("_HomePageNewsLetterComponentPartial")
+                            </div>
                             @await Component.InvokeAsync("_HomePageLastThreeArticleComponentPartial")
                             @await Component.InvokeAsync("_HomePageCategoryListComponentPartial")
-                        
+
                         </div><!-- end sidebar -->
                     </div><!-- end col -->
                 </div><!-- end row -->
