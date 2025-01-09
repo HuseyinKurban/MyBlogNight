@@ -1,32 +1,50 @@
 ﻿@model List<Category>
 @{
-    Layout = null;
+    Layout = "~/Views/Shared/_WriterLayout.cshtml";
 }
-<link href="~/lib/bootstrap/dist/css/bootstrap.rtl.min.css" rel="stylesheet" />
 
-<div class="container">
-    <br /><br />
-    <table class="table table-hover">
-        <tr>
-            <th>#</th>
-            <th>Kategori Adı</th>
-            <th>Sil</th>
-            <th>Güncelle</th>
-            <th>Bloglar</th>
-        </tr>
-    @foreach (var item in Model)
-        {
-            <tr>
-                <td>@item.CategoryId</td>
-                <td>@item.CategoryName</td>
-                <td><a href="/Category/DeleteCategory/@item.CategoryId" class="btn btn-danger">Sil</a></td>
-                <td><a href="/Category/UpdateCategory/@item.CategoryId" class="btn btn-success">Güncelle</a></td>
-                <td><a class="btn btn-warning">Bloglar</a></td>
-                
-            </tr>
-            
-        }
+<div class="container mt-5">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="text-dark fw-bold">Kategori Yönetimi</h2>
        
-    </table>
-    <a href="/Category/CreateCategory" class="btn btn-primary">Yeni Kategori Girişi</a>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-bordered table-striped text-center align-middle">
+            <thead class="table-dark">
+                <tr>
+                    <th class="fw-bold">#</th>
+                    <th class="fw-bold">Kategori Adı</th>
+                    <th class="fw-bold">Sil</th>
+                    <th class="fw-bold">Güncelle</th>
+                    <th class="fw-bold">Bloglar</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td class="fw-bold text-dark">@item.CategoryId</td>
+                        <td class="fw-bold text-dark">@item.CategoryName</td>
+                        <td>
+                            <a href="/Category/DeleteCategory/@item.CategoryId" class="btn btn-danger btn-sm fw-bold">
+                                Sil
+                            </a>
+                        </td>
+                        <td>
+                            <a href="/Category/UpdateCategory/@item.CategoryId" class="btn btn-success btn-sm fw-bold">
+                                Güncelle
+                            </a>
+                        </td>
+                        <td>
+                            <a href="/Category/Blogs/@item.CategoryId" class="btn btn-warning btn-sm fw-bold">
+                                Bloglar
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+        <a href="/Category/CreateCategory" class="btn btn-primary fw-bold">Yeni Kategori Ekle</a>
+    </div>
+  
 </div>

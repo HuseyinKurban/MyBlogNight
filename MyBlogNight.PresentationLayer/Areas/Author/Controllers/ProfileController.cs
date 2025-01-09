@@ -9,10 +9,14 @@ namespace MyBlogNight.PresentationLayer.Areas.Author.Controllers
     public class ProfileController : Controller
     {
         private readonly UserManager<AppUser> _userManager;
+        private readonly SignInManager<AppUser> _signInManager;
 
-        public ProfileController(UserManager<AppUser> userManager)
+
+
+        public ProfileController(UserManager<AppUser> userManager, SignInManager<AppUser> signInManager)
         {
             _userManager = userManager;
+            _signInManager = signInManager;
         }
 
         [HttpGet]
@@ -44,6 +48,12 @@ namespace MyBlogNight.PresentationLayer.Areas.Author.Controllers
             }
             return View();
            
+        }
+
+        public async Task<IActionResult>LogOut()
+        {
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("Index", "Login");
         }
     }
 }

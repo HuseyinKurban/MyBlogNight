@@ -1,9 +1,34 @@
 ﻿@model List<Comment>
 @{
-    Layout = null;
-}
+    ViewData["Title"] = "MyCommentList";
+    Layout = "~/Views/Shared/_WriterLayout.cshtml";
 
-@foreach(var item in Model)
-{
-    <p>@item.CommentDetail - @item.ArticleId</p>
 }
+<div class="content">
+    <div class="content-header text-center py-4">
+        <h1 class="display-4">Yorumlarım</h1>
+    </div>
+
+
+
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-12 col-lg-12 mb-4">
+                <div class="card shadow-sm h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">@item.Article.Title</h5>
+                        <p class="card-text">
+                            @item.CommentDetail
+                        </p>
+                        <a href="/Article/ArticleDetail/@item.ArticleId" target="_blank" class="btn btn-info">Yoruma Git</a>
+                        <a href="/Author/Comment/UpdateComment/@item.CommentId" class="btn btn-warning">Güncelle</a>
+                        <a href="/Author/Comment/DeleteComment/@item.CommentId" class="btn btn-danger">Sil</a>
+                     
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+</div>

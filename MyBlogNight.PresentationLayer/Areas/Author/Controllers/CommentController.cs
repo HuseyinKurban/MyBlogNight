@@ -23,5 +23,26 @@ namespace MyBlogNight.PresentationLayer.Areas.Author.Controllers
             var values = _commentService.TGetCommentsByAppUserId(user.Id);
             return View(values);
         }
+
+        public IActionResult DeleteComment(int id)
+        {
+            _commentService.TDelete(id);
+            return RedirectToAction("/Author/Comment/MyCommentList");
+        }
+
+        [HttpGet]
+        public IActionResult UpdateComment(int id)
+        {
+            var value = _commentService.TGetById(id);
+            return View(value);
+        }
+
+        [HttpPost]
+        public IActionResult UpdateComment(Comment comment)
+        {
+
+            _commentService.TUpdate(comment);
+            return Redirect("/Author/Comment/MyCommentList");
+        }
     }
 }

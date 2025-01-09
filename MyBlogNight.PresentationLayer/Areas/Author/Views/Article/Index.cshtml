@@ -13,7 +13,7 @@
 
     <div class="row mb-4">
         <div class="col-12 text-end">
-            <a href="#" class="btn btn-primary btn-lg">Yeni Yazı Girişi</a>
+            <a href="/Author/Article/CreateArticle" class="btn btn-primary btn-lg">Yeni Yazı Girişi</a>
         </div>
     </div>
 
@@ -27,8 +27,8 @@
                         <p class="card-text">
                             @item.Detail
                         </p>
-                        <a href="#" class="btn btn-danger">Sil</a>
-                        <a href="#" class="btn btn-warning">Güncelle</a>
+                        <a href="/Author/Article/DeleteArticle/@item.ArticleId" class="btn btn-danger">Sil</a>
+                        <a href="/Author/Article/UpdateArtilce/@item.ArticleId" class="btn btn-warning">Güncelle</a>
                     </div>
                 </div>
             </div>

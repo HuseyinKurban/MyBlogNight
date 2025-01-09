@@ -1,12 +1,13 @@
 ﻿@model Article
 @{
- 
-    Layout = null;
+    ViewData["Title"] = "UpdateArtilce";
+    Layout = "~/Views/Shared/_WriterLayout.cshtml";
 }
 
 <form method="post">
     <div class="container">
         <br /><br />
+        <input type="hidden" asp-for="ArticleId" />
         <label>Başlık</label>
         <input type="text" asp-for="Title" class="form-control" />
         <br />
@@ -25,3 +26,6 @@
         <button class="btn btn-primary">Makaleyi Ekle</button>
     </div>
 </form>
+
+
+
