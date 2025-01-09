@@ -28,6 +28,7 @@ namespace MyBlogNight.PresentationLayer.Areas.Author.Controllers
             model.Name = values.Name;
             model.Username = values.UserName;
             model.Email = values.Email;
+            model.Details = values.Details;
             return View(model);
         }
 

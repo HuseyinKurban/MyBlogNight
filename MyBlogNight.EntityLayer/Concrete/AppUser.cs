@@ -21,9 +21,5 @@ namespace MyBlogNight.EntityLayer.Concrete
 
         public List<Comment> Comments { get; set; }
 
-        public static implicit operator UserManager<object>(AppUser v)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

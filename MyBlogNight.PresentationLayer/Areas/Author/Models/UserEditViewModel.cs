@@ -12,5 +12,7 @@
 
         public string Password { get; set; }
 
+        public string Details { get; set; }
+
     }
 }
