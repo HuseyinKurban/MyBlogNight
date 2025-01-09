@@ -34,7 +34,7 @@
 ![image](https://github.com/user-attachments/assets/f1b5059d-e2fe-4e77-a173-acaa2358d89a)
 
 ### Ana Sayfa: Görseller
-![screencapture-localhost-7214-homepage-index-2025-01-09-20_59_25](https://github.com/user-attachments/assets/6faf0337-2699-4f38-9088-aefb3b72a90b)
+![screencapture-localhost-7214-HomePage-Index-2025-01-09-17_02_23](https://github.com/user-attachments/assets/dc3b115f-2a5b-44ce-a64f-361b9604e609)
 ![screencapture-localhost-7214-HomePage-Index-2025-01-09-17_02_52](https://github.com/user-attachments/assets/18bdf410-87f0-4a6d-af46-e8dd45af6627)
 ![screencapture-localhost-7214-Article-ArticleDetail-1-2025-01-09-17_04_08](https://github.com/user-attachments/assets/e3ab9be9-e608-4f45-8e52-4ff30dfe53b5)
 ![screencapture-localhost-7214-Article-ArticleDetail-1-2025-01-09-17_53_23](https://github.com/user-attachments/assets/8dd78ec4-8bb0-46f5-b4ba-cab14ed61367)
