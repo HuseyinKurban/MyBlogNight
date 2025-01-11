@@ -50,5 +50,3 @@
 ![screencapture-localhost-7214-Author-Article-UpdateArtilce-10-2025-01-10-12_05_22](https://github.com/user-attachments/assets/90ebc4fb-8b89-474f-95f6-960002de3ac8)
 ![screencapture-localhost-7214-Author-Comment-MyCommentList-2025-01-10-12_07_06](https://github.com/user-attachments/assets/8a947760-8990-4b79-bc25-f27a0fe8843b)
 
-
-
