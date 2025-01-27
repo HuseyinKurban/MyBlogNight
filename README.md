@@ -3,7 +3,7 @@
 ## Proje Hakkında
 **Markedia Blog**, kullanıcıların blog yazıları yazıp, düzenleyip, paylaşabileceği bir platformdur. Yazarlar, sisteme kaydolup giriş yaptıktan sonra içeriklerini yönetebilir, yorum yapabilir ve kategorileri düzenleyebilirler. Ana sayfada, popüler blog yazıları ve son eklenen içerikler görüntülenir. Kullanıcılar, e-posta adreslerini girerek haftalık bültenlere abone olabilir.
 
-## Kullanılan Teknolojiler ve Araçlar
+## 🚀 Kullanılan Teknolojiler ve Araçlar:
 
 - 💻 **Asp.Net Core 8.0**
 - 🗄️ **MSSQL Veritabanı**
